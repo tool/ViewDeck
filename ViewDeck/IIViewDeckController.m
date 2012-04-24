@@ -165,6 +165,8 @@ __typeof__(h) __h = (h);                                    \
 - (void)vdc_viewWillDisappear:(bool)animated;
 - (void)vdc_viewDidDisappear:(bool)animated;
 
+- (void)reapplySideController:(__strong UIViewController **)controllerStore;
+
 @end
 
 
