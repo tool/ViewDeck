@@ -122,6 +122,11 @@ __typeof__(h) __h = (h);                                    \
 - (BOOL)openRightViewAnimated:(BOOL)animated callDelegate:(BOOL)callDelegate completion:(void (^)(IIViewDeckController *))completed;
 - (BOOL)openRightViewAnimated:(BOOL)animated options:(UIViewAnimationOptions)options callDelegate:(BOOL)callDelegate completion:(void(^)(IIViewDeckController* controller))completed;
 
+- (BOOL)closeLeftViewBouncing:(void(^)(IIViewDeckController* controller))bounced callDelegate:(BOOL)callDelegate completion:(void (^)(IIViewDeckController *))completed;
+- (BOOL)closeRightViewBouncing:(void(^)(IIViewDeckController* controller))bounced callDelegate:(BOOL)callDelegate completion:(void (^)(IIViewDeckController *))completed;
+
+- (CGFloat)locationOfPanner:(UIPanGestureRecognizer*)panner;
+
 - (CGRect)slidingRectForOffset:(CGFloat)offset;
 - (CGSize)slidingSizeForOffset:(CGFloat)offset;
 - (void)setSlidingFrameForOffset:(CGFloat)frame;
@@ -1174,8 +1179,8 @@ __typeof__(h) __h = (h);                                    \
     
     [self setSlidingFrameForOffset:x];
     
-    BOOL rightWasHidden = self.rightController.view.hidden;
-    BOOL leftWasHidden = self.leftController.view.hidden;
+//    BOOL rightWasHidden = self.rightController.view.hidden;
+//    BOOL leftWasHidden = self.leftController.view.hidden;
     
     [self performOffsetDelegate:@selector(viewDeckController:didPanToOffset:) offset:x];
     
