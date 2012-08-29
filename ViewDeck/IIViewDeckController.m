@@ -1226,8 +1226,8 @@ __typeof__(h) __h = (h);                                    \
 
     if (didCloseSelector)
         [self performDelegate:didCloseSelector animated:NO];
-    if (didOpenSelector)
-        [self performDelegate:didOpenSelector animated:NO];
+//    if (didOpenSelector)
+//        [self performDelegate:didOpenSelector animated:NO];
 }
 
 
