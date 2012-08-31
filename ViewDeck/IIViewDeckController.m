@@ -1039,6 +1039,7 @@ __typeof__(h) __h = (h);                                    \
     }
     self.centerTapper = nil;
     [self addPanners];
+    [self performDelegate:@selector(viewDeckControllerDidShowCenterView:animated:) animated:NO];
 }
 
 - (void)centerViewHidden {
