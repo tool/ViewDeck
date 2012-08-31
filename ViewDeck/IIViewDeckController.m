@@ -1196,10 +1196,10 @@ __typeof__(h) __h = (h);                                    \
         if (ABS(velocity) < 500) {
             // small velocity, no movement
             if (x >= w - self.leftLedge - lw3) {
-                [self openLeftViewAnimated:YES options:UIViewAnimationOptionCurveEaseOut callDelegate:NO completion:nil];
+                [self openLeftViewAnimated:YES options:UIViewAnimationOptionCurveEaseOut callDelegate:YES completion:nil];
             }
             else if (x <= self.rightLedge + rw3 - w) {
-                [self openRightViewAnimated:YES options:UIViewAnimationOptionCurveEaseOut callDelegate:NO completion:nil];
+                [self openRightViewAnimated:YES options:UIViewAnimationOptionCurveEaseOut callDelegate:YES completion:nil];
             }
             else
                 [self showCenterView:YES];
